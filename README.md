@@ -3,10 +3,26 @@
 LN6001/QSDK 12.2 IPK release area for the BBFDM and iCWMP runtime packages
 used in early BBF/TR-069 bring-up.
 
-This repository is intended for public release metadata and GitHub Release
-assets. The IPK binaries are not committed to git; attach reviewed release
-assets to a GitHub Release after confirming the package provenance, license
-notices, and source-availability requirements.
+## Download IPKs
+
+Latest release: [`ln6001-q12.2-20260709`](https://github.com/ikm-san/icwmp-ln6001/releases/tag/ln6001-q12.2-20260709)
+
+Direct downloads:
+
+- [`mxml_2.12-1_arm_cortex-a7_neon-vfpv4.ipk`](https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/mxml_2.12-1_arm_cortex-a7_neon-vfpv4.ipk)
+- [`bbfdm_7.5-1_arm_cortex-a7_neon-vfpv4.ipk`](https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/bbfdm_7.5-1_arm_cortex-a7_neon-vfpv4.ipk)
+- [`icwmp_7.5-1_arm_cortex-a7_neon-vfpv4.ipk`](https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/icwmp_7.5-1_arm_cortex-a7_neon-vfpv4.ipk)
+- [`SHA256SUMS-2026-07-09.txt`](https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/SHA256SUMS-2026-07-09.txt)
+
+Download from a shell:
+
+```sh
+wget https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/mxml_2.12-1_arm_cortex-a7_neon-vfpv4.ipk
+wget https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/bbfdm_7.5-1_arm_cortex-a7_neon-vfpv4.ipk
+wget https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/icwmp_7.5-1_arm_cortex-a7_neon-vfpv4.ipk
+wget https://github.com/ikm-san/icwmp-ln6001/releases/download/ln6001-q12.2-20260709/SHA256SUMS-2026-07-09.txt
+sha256sum -c SHA256SUMS-2026-07-09.txt
+```
 
 ## Packages
 

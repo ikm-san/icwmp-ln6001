@@ -1,0 +1,10 @@
+*.ipk
+*.bin
+*.img
+*.trx
+*.itb
+*.tar
+*.tar.*
+*.zip
+packages/*
+!packages/.gitkeep

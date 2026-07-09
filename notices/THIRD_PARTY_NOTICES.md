@@ -1,0 +1,64 @@
+# Third-Party Notices
+
+Date: 2026-07-09
+
+## Scope
+
+This file records the current license/provenance checklist for the LN6001
+BBFDM/iCWMP IPK distribution. It is not legal advice and does not replace the
+full upstream license texts.
+
+## bbfdm
+
+- Package: `bbfdm`
+- Version: `7.5-1`
+- Target: `arm_cortex-a7_neon-vfpv4`
+- Local package license metadata: `BSD-3-Clause`
+- Upstream source: `https://dev.iopsys.eu/bbf/bbfdm.git`
+- Source revision: `a52d79b11fd0cf709d55baa15eee078aa38ddca1`
+
+Release assets should reproduce the upstream BSD-3-Clause copyright and
+license notice.
+
+## icwmp
+
+- Package: `icwmp`
+- Version: `7.5-1`
+- Target: `arm_cortex-a7_neon-vfpv4`
+- Local package license metadata: `BSD-3-Clause`
+- Upstream source: `https://dev.iopsys.eu/bbf/icwmp.git`
+- Source revision: `eb60ced578efa949286df4860bd756b3da6b021c`
+
+Release assets should reproduce the upstream BSD-3-Clause copyright and
+license notice.
+
+## mxml
+
+- Package: `mxml`
+- Version: `2.12-1`
+- Target: `arm_cortex-a7_neon-vfpv4`
+- Local QSDK package license metadata: `GPL-2.0`
+- Local QSDK license file marker: `COPYING`
+- Upstream source: `https://github.com/michaelrsweet/mxml.git`
+- Source revision: `3aaa12c7d709d05286255d191998f29105dd407a`
+
+Because this binary package is marked GPL-2.0 in the local QSDK package
+metadata, public binary distribution should include the GPL license text and a
+corresponding source offer or source bundle for the exact shipped build.
+
+Note: current upstream Mini-XML materials describe newer Mini-XML releases as
+Apache-2.0 with an optional exception, but this LN6001/QSDK package metadata
+for `mxml` 2.12 is the release-specific source of truth until the exact
+checked-out source license is reviewed.
+
+## Release Checklist
+
+- Do not commit `.ipk` files to git history.
+- Attach reviewed IPKs as GitHub Release assets only.
+- Publish SHA-256 checksums beside release assets.
+- Include full upstream license texts for all shipped packages.
+- Include source links and exact source revisions.
+- Include downstream patch names or a source bundle for the exact shipped
+  build, especially for `mxml`.
+- Do not publish ACS URLs, credentials, device serials, MAC addresses, private
+  logs, proprietary SDK contents, or customer/device-specific configuration.

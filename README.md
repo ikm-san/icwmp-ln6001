@@ -1,20 +1,23 @@
 # Linksys Velop WRT Pro 7 (LN6001) iCWMP IPKs
 
-The Linksys Velop WRT Pro 7 (LN6001) is a Wi-Fi 7 / 802.11be router for
-users who want a Linksys device with an OpenWrt-style administration surface.
-Linksys documents the WRT Pro 7 family as using OpenWRT 19.07/LuCI, a
-1.5 GHz quad-core processor, one 2.5 Gbps internet port, and four 1 Gbps
-Ethernet ports.
+The Linksys Velop WRT Pro 7 (LN6001) is an OpenWrt based Wi-Fi 7 router for
+home labs, SOHO networks, small offices, and integrators who want Linksys
+hardware with LuCI, SSH, opkg packages, and scriptable network configuration.
+Linksys positions the Japanese LN6001-JP model as a home and business
+OpenWrt based Wi-Fi 7 router with tri-band wireless, a 1.5 GHz quad-core
+Qualcomm platform, a 2.5 Gbps internet port, and four 1 Gbps Ethernet ports.
 
-This repository provides LN6001/QSDK 12.2 IPK release assets for BBFDM and
-iCWMP, the runtime pieces used to bring TR-181/TR-069/CWMP remote-management
-support to the device. In practical terms, these packages are for operators,
-integrators, and developers testing ACS connectivity or managed-WiFi workflows
-on the LN6001.
+Product page: [Linksys Velop WRT Pro 7 OpenWrt Router WiFi 7 LN6001-JP](https://support.linksys.com/kb/article/6274-jp/)
 
-This is not a full firmware image and it does not configure an ACS by itself.
-It only publishes the runtime IPKs and source/license materials needed to
-install the BBF/iCWMP stack on a compatible LN6001 build.
+This repository publishes LN6001/QSDK 12.2 IPK release assets for BBFDM and
+iCWMP. These packages add the runtime components used for TR-181/TR-069/CWMP
+remote-management bring-up, including ACS connectivity testing and
+managed-WiFi integration work.
+
+This is not a firmware image, a full managed-WiFi stack, or an ACS
+configuration package. It only provides the runtime IPKs plus the source,
+checksum, and license materials needed to install and audit the BBF/iCWMP
+components on a compatible LN6001 build.
 
 ## Download IPKs
 
@@ -47,7 +50,7 @@ The current LN6001 set is:
 | `icwmp` | `7.5-1` | `arm_cortex-a7_neon-vfpv4` | `BSD-3-Clause` |
 | `mxml` | `2.12-1` | `arm_cortex-a7_neon-vfpv4` | `GPL-2.0` in the QSDK package metadata |
 
-## Install Order
+## Install
 
 Install `mxml` first, then `bbfdm`, then `icwmp`:
 
@@ -57,14 +60,16 @@ opkg install ./bbfdm_7.5-1_arm_cortex-a7_neon-vfpv4.ipk
 opkg install ./icwmp_7.5-1_arm_cortex-a7_neon-vfpv4.ipk
 ```
 
-These packages only provide the runtime components. ACS configuration,
-credentials, service enablement, and smoke testing should be handled by the
-owning LN6001/Kaname workflow, not by publishing secrets or device-specific
-configuration in this repository.
+After installation, ACS URL, credentials, service enablement, and smoke testing
+should be handled by the owning LN6001/Kaname workflow. Do not publish
+device-specific ACS configuration, router credentials, serial numbers, MAC
+addresses, private logs, or customer data in this repository.
 
 ## Source And Provenance
 
-The package metadata used for this release points to:
+The release includes IPKs, SHA-256 checksums, upstream source archives, and the
+LN6001 downstream package-feed patch bundle. Source revisions used for the
+published packages:
 
 - `bbfdm`: `https://dev.iopsys.eu/bbf/bbfdm.git`
   at `a52d79b11fd0cf709d55baa15eee078aa38ddca1`
@@ -73,14 +78,14 @@ The package metadata used for this release points to:
 - `mxml`: `https://github.com/michaelrsweet/mxml.git`
   at `3aaa12c7d709d05286255d191998f29105dd407a`
 
-If binary assets are published, the release notes should include:
+Release materials include:
 
 - exact filenames
 - SHA-256 checksums
 - build date and QSDK target
 - applied downstream patches
 - links to corresponding source and license texts
-- any GPL source offer or source bundle required for `mxml`
+- source archives for the shipped upstream revisions
 
 ## License
 

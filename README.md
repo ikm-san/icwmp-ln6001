@@ -1,7 +1,20 @@
-# icwmp-ln6001
+# Linksys Velop WRT Pro 7 (LN6001) iCWMP IPKs
 
-LN6001/QSDK 12.2 IPK release area for the BBFDM and iCWMP runtime packages
-used in early BBF/TR-069 bring-up.
+The Linksys Velop WRT Pro 7 (LN6001) is a Wi-Fi 7 / 802.11be router for
+users who want a Linksys device with an OpenWrt-style administration surface.
+Linksys documents the WRT Pro 7 family as using OpenWRT 19.07/LuCI, a
+1.5 GHz quad-core processor, one 2.5 Gbps internet port, and four 1 Gbps
+Ethernet ports.
+
+This repository provides LN6001/QSDK 12.2 IPK release assets for BBFDM and
+iCWMP, the runtime pieces used to bring TR-181/TR-069/CWMP remote-management
+support to the device. In practical terms, these packages are for operators,
+integrators, and developers testing ACS connectivity or managed-WiFi workflows
+on the LN6001.
+
+This is not a full firmware image and it does not configure an ACS by itself.
+It only publishes the runtime IPKs and source/license materials needed to
+install the BBF/iCWMP stack on a compatible LN6001 build.
 
 ## Download IPKs
 

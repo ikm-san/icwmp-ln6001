@@ -1,0 +1,4 @@
+601a17aea1fbf92c70d3067552c958b4d2518247dcf8cca434c793d6664df8b3  mxml_2.12-1_arm_cortex-a7_neon-vfpv4.ipk
+22b6bc4b52a8fb5ffe61e0c14d5fde832d2e320d5cc5b1ca903c7c1985fcd41f  bbfdm_7.5-1_arm_cortex-a7_neon-vfpv4.ipk
+038837cf8a69d119f3508847ab2b03e957009edca7f15b40cb55fe33a1653343  icwmp_7.5-1_arm_cortex-a7_neon-vfpv4.ipk
+b35b24be5b9263eb03c7f4c10498fd353c2d898d2e207dc4d7bf2d361ee1f331  bbf-agent_26.4.0726_all.ipk

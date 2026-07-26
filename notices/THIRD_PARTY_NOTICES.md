@@ -1,11 +1,11 @@
 # Third-Party Notices
 
-Date: 2026-07-09
+Date: 2026-07-26
 
 ## Scope
 
 This file records the current license/provenance checklist for the LN6001
-BBFDM/iCWMP IPK distribution. It is not legal advice and does not replace the
+BBFDM/iCWMP and bbf-agent IPK distribution. It is not legal advice and does not replace the
 full upstream license texts.
 
 ## bbfdm
@@ -65,12 +65,27 @@ Note: current upstream Mini-XML materials describe newer Mini-XML releases as
 Apache-2.0 with an optional exception, but this LN6001 package uses the older
 `mxml` 2.12 source revision listed above.
 
+## bbf-agent
+
+- Package: `bbf-agent`
+- Version: `26.4.0726`
+- Target: `all`
+- Local package license metadata: `Proprietary`
+- Role: LN6001 identity mappings, BBF JSON descriptors, runtime links, ACS
+  configuration helper, and first-Inform smoke/status commands
+
+The repository MIT license applies only to repository-authored documentation
+and metadata. It does not relicense the `bbf-agent` binary. The public release
+provides the binary LN6001 companion package without granting a source-code
+license or redistribution rights beyond the package owner's terms.
+
 ## Release Checklist
 
 - Do not commit `.ipk` files to git history.
 - Attach reviewed IPKs as GitHub Release assets only.
 - Publish SHA-256 checksums beside release assets.
-- Include full upstream license texts for all shipped packages.
+- Include full upstream license texts for open-source packages and an explicit
+  proprietary notice for `bbf-agent`.
 - Include source links and exact source revisions.
 - Include downstream patch names or a source bundle for the exact shipped
   build, especially for `mxml`.
